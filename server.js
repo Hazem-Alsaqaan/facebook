@@ -1,6 +1,7 @@
 const express = require("express")
 const cors = require("cors")
 const dotenv = require("dotenv")
+const bodyParser = require("body-parser");
 const db = require("./db")
 const ApiError = require("./src/utilities/ApiError")
 const {usersRouter} = require("./src/routes/usersRouter")
@@ -11,7 +12,9 @@ const app = express();
 //add cors
 app.use(cors())
 //handle middleware
-app.use(express.json())
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
+app.use(express.json());
 // config dotenv
 dotenv.config({
     path: ".env"
