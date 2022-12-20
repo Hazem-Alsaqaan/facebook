@@ -4,7 +4,7 @@ const ApiError = require("../utilities/ApiError")
 //get posts
 const getPosts = async(req, res, next)=>{
     try{
-        const posts = await postsModel.find()
+        const posts = await postsModel.find().populate({path: "users"})
         res.status(200).json(posts)
     }catch(err){
         next(new ApiError(`error from server to get posts ${err.message}`))
@@ -12,10 +12,10 @@ const getPosts = async(req, res, next)=>{
 }
 //add new post
 const addPost = async(req, res, next)=>{
-    const {content, image, like, share, comments} = req.body
+    const {content, image, like, share, comments, users} = req.body
     try{
         const newPost = await postsModel.create(
-            {content, image, like, share, comments}
+            {content, image, like, share, comments, users}
         )
         res.status(200).json(newPost)
     }catch(err){

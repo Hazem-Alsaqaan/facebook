@@ -13,11 +13,11 @@ const postsSchema = mongoose.Schema({
         share: {
             type: Number,
         },
-        comments:[
-            {
-                comment: {type: String},
-            }
-        ],
+        users: {
+            type: mongoose.Types.ObjectId,
+            ref: "users",
+            required: true
+        }
 })
 const postsModel = mongoose.model("posts", postsSchema);
 module.exports = {postsModel}
