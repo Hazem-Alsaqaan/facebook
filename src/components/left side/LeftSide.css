@@ -1,0 +1,45 @@
+
+.left-side ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+}
+.left-side ul div {
+    display: flex;
+    align-items: center;
+}
+.left-side ul div span.user-name {
+    white-space: nowrap;
+}
+.left-side ul div img {
+    max-width: 50px;
+    max-height: 50px;
+    margin: 5px;
+}
+.left-side ul li {
+    width: 100%;
+    padding: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.left-side ul li:hover {
+    background-color: var(--hover-light);
+    border-radius: 8px 8px 50px 50px ;
+}
+.left-side ul li svg {
+    color: var(--blue);
+    margin: 0px 7px;
+    font-size: 18px;
+}
+.left-side ul li.bookmark svg{
+    color: rgb(156, 0, 148);
+}
+.left-side ul li.flag svg{
+    color: orangered;
+}
+@media(max-width: 792px){
+    .left-side{
+        display: none;
+    }
+}

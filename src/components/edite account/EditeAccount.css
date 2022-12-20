@@ -1,0 +1,14 @@
+.edite-account {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #969dacaf;
+    display: flex;
+    flex-direction: column;
+}
+.edite-account label {
+    text-align: center;
+    font-weight: bold;
+    color: var(--blue);
+}

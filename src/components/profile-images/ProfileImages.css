@@ -1,0 +1,50 @@
+.profile{
+    background-image: linear-gradient(to bottom, #808080, #ffffff 50%);
+    padding: 0px 80px;
+    overflow: hidden;
+}
+.profile-images{
+    position: relative;
+}
+.profile-images .user-content{
+    display: flex;
+}
+.profile-images .user-img {
+    width: 150px;
+    height: 150px;
+    transform: translateY(-50px);
+    margin-left: 30px;
+    border: 4px solid var(--gray);
+    border-radius: 50%;
+}
+.profile-images .user-img .personal-img{
+    width: 100%;
+    height: 100%;
+}
+
+.profile-images .user-img form {
+    position: absolute;
+    bottom: -60%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    display: flex;
+}
+.profile-images .user-img form input{
+    font-size: 12px;
+    opacity: 50%;
+}
+.profile-images .user-img form button{
+    font-size: 12px;
+    padding: 2px;
+    height: fit-content;
+    border-radius: 0%;
+}
+
+
+@media(max-width: 491px){
+    .profile{
+        padding: 0px;
+    }
+}

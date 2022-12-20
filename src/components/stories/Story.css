@@ -1,0 +1,39 @@
+.stories {
+    display: flex;
+    justify-content: center;
+    padding: 25px 0px;
+}
+.story {
+    border-radius: 20px 20px;
+    width: 120px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+.story .box-story img{
+    height: 200px;
+}
+.story .box-story .story-profile-img{
+    position: absolute;
+    border: 3px solid var(--blue);
+    top: 10px;
+    left: 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+}
+
+.stories .story p{
+    color: var(--light);
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    font-size: 14px;
+}
+
+@media(max-width: 550px){
+    .story{
+        max-width: 70px;
+    }
+}

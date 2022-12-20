@@ -1,0 +1,33 @@
+.nav-icons{
+    margin: 0px 15px;
+    padding: 0px 10px;
+}
+.nav-icons ul {
+    padding: 0px;
+    margin-bottom: 0px;
+}
+.nav-icons ul li {
+    background-color: var(--grayEEE);
+    margin: 0px 5px;
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.nav-icons ul a li {
+    padding: 0px;
+}
+
+.nav-icons ul li:hover {
+    background-color: var(--grayCCC);
+}
+@media(max-width: 682px){
+    .nav-icons ul li{
+        margin: 0px 1px;
+    }
+}

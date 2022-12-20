@@ -1,0 +1,67 @@
+.handle-create{
+    min-width: 350px;
+    max-width: 450px;
+    max-height: 500px;
+    background-color: var(--white);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px 8px;
+    box-shadow: 0px 0px 8px -4px #333;
+    position: relative;
+}
+.handle-create .share-image {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+.handle-create section{
+    display: flex;
+    align-items: center;
+
+}
+.handle-create section div {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.handle-create textarea{
+    width: 100%;
+    background-color: var(--light);
+    border-radius: 20px 20px;
+    border: none;
+    transition-duration: .3s;
+    padding: 5px;
+    margin: 10px 0px;
+}
+.handle-create textarea:focus {
+    outline: none;
+}
+
+.handle-create .in-your-mind {
+    position: relative;
+}
+.handle-create .in-your-mind input[type= "file"] {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+}
+.handle-create .in-your-mind div.text {
+    display: flex;
+    border-top: 1px solid var(--grayCCC);
+}
+.handle-create .in-your-mind div.text span {
+    padding: 5px;
+    color: var(--gray);
+    white-space: nowrap;
+}
+@media(max-width: 385px){
+    .handle-create {
+        max-width: 350px;
+    }
+}

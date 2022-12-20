@@ -1,0 +1,33 @@
+
+.background-profile {
+    width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+    border-bottom: 2px solid var(--gray);
+    border-radius: 0px 0px 20px 20px;
+    position: relative;
+}
+.background-profile>img{
+    width: 100%;
+}
+
+/*********************************************** form */
+
+.background-profile form.edit-picture {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    bottom: 10px;
+    max-width: 100px;
+    border-radius: 8px 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.background-profile form.edit-picture input[type="file"]{
+    opacity: 70%;
+}
+.background-profile form.edit-picture button{
+    padding: 2px;
+    font-size: 12px;
+    border-radius: 0px;
+}

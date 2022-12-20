@@ -1,0 +1,13 @@
+.header-login {
+    background-color: var(--login-blue);
+}
+.header-login-content{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.header-login-content h1{
+    flex: 1;
+    color: var(--white);
+    font-weight: 700;
+}

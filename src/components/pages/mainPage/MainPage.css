@@ -1,0 +1,45 @@
+.main-page {
+    min-height: calc(100vh - 72px);
+    padding: 50px 0px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.main-page .leftside-mainPage {
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-page .leftside-mainPage h6{
+    color: var(--gray);
+    margin: 20px 5px;
+}
+/* .main-page::after{
+    content: "";
+    position: absolute;
+    background-color: #0f90f356;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    bottom: 0px;
+    left: 0px;
+    filter: blur(10px);
+    animation-name: moving;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    z-index: -1;
+}
+@keyframes moving {
+    from{
+        bottom: 20%;
+        left: 20%;
+    }
+    to{
+        bottom: 80%;
+        left: 80%;
+    }
+} */

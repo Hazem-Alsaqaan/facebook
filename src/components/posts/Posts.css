@@ -1,0 +1,69 @@
+.post-box {
+    background-color: var(--white);
+    padding: 25px;
+    margin: 10px 0px;
+    border-radius: 8px 8px;
+    box-shadow: 0px 0px 8px -4px #333;
+    max-width: 450px;
+}
+/* auther info */
+.post-box .auther-info {
+    display: flex;
+    align-items: center;
+}
+.post-box .auther-info p {
+    margin-bottom: 0px;
+}
+.post-box .auther-info .date {
+    font-size: 10px;
+}
+.post-box .auther-info .auther-img{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+}
+/* img */
+.post-box .post-img{
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+/* text */
+.post-box .post-text {
+    margin: 10px 0px;
+    background-color: var(--light);
+}
+/* actions count */
+.post-box .post-count-action {
+    display: flex;
+    justify-content: space-between;
+}
+.post-box .post-count-action div span{
+    margin: 0px 5px;
+    font-size: 14px;
+    color: var(--gray);
+}
+/* actions */
+.post-box .post-actions .post-reaction{
+    display: flex;
+    justify-content: space-between;
+}
+.post-box .post-actions .post-reaction span{
+    color: var(--gray);
+    cursor: pointer;
+}
+.post-box .post-actions .post-reaction svg{
+    margin: 0px 5px;
+    font-size: 20px;
+    color: var(--blue);
+}
+
+@media(max-width: 485px){
+    .post-box {
+        max-width: 350px;
+    }
+}

@@ -1,0 +1,46 @@
+.main-user-info {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+}
+.main-user-info .text {
+    padding: 0px 10px;
+    text-align: center;
+} 
+.main-user-info .text h3 {
+    text-transform: capitalize;
+    font-weight: bold;
+} 
+.main-user-info .text .user-job {
+    color: var(--blue);
+}
+.main-user-info .btn-section{
+    display: flex;
+    justify-content: center;
+}
+.main-user-info .btn-section button {
+    padding: 0px 5px;
+    overflow: hidden;
+}
+@media (max-width: 820px){
+    .main-user-info{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 691px){
+    .main-user-info .text h3{
+        font-size: 16px;
+    }
+    .main-user-info .btn-section button,
+    .main-user-info .text .friends-number {
+        font-size: 12px;
+    }
+}
+@media(min-width: 791px){
+    .main-user-info{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}

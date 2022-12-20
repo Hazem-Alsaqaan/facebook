@@ -1,0 +1,15 @@
+.comment-list {
+    padding: 10px;
+    background-color: var(--light);
+}
+.comment-list div {
+    margin: 10px;
+    background-color: #6d6d6d;
+    display: flex;
+    justify-content: space-between;
+}
+.comment-list span.comment {
+    padding: 5px;
+    color: var(--white);
+    border-radius: 10px 10px;
+}

@@ -1,0 +1,17 @@
+.login{
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.login div label {
+    margin: 0px;
+    color: var(--white);
+}
+.login div input {
+    padding: 3px;
+}
+.login .btn-primary{
+    padding:  0px 5px;
+    margin: 5px 0px;
+}

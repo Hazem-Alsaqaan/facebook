@@ -1,0 +1,29 @@
+section.sponsored {
+    padding: 20px 0px;
+}
+section.sponsored h5 {
+    color: var(--gray);
+}
+section.sponsored div.box-sponsored {
+    display: flex;
+    padding: 10px;
+    max-width: 350px;
+    overflow: hidden;
+}
+section.sponsored div.box-sponsored img {
+    width: 50%;
+    height: 100%;
+}
+section.sponsored div.box-sponsored div.text-sponsored {
+    margin-left: 10px;
+}
+section.sponsored div.box-sponsored div.text-sponsored p {
+    font-weight: 700;
+    line-height: 1.2;
+    color: rgb(87, 87, 87);
+}
+section.sponsored div.box-sponsored div.text-sponsored a {
+    margin-left: 10px;
+    font-size: 14px;
+    color: var(--gray);
+}

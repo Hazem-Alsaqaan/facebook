@@ -1,0 +1,22 @@
+.user-features{
+    padding: 10px;
+    margin: 20px;
+    border-top: 2px solid var(--grayCCC);
+    display: flex;
+}
+.user-features li{
+    padding: 5px;
+    margin: 0px 5px;
+    color: var(--gray);
+}
+@media(min-width: 791px){
+    .user-features{
+        margin: 60px 20px 20px 20px;
+    }
+}
+@media(max-width: 578px){
+    .user-features li{
+        font-size: 12px;
+        margin: 0px;
+    }
+}
