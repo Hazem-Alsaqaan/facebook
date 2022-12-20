@@ -8,3 +8,4 @@ Social App : look like facebook .. using Reactjs, mongodb, nodejs, express, redu
 ` npm install `
 #### step 4. run the server
 ` node server.js `
+#### step 5. go to client branch and then follow steps in README file
