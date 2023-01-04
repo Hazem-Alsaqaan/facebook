@@ -7,8 +7,6 @@ import { Link } from "react-router-dom";
 import ProfileImg from "../profile img/ProfileImg";
 
 const NavIcons = ()=>{
-    
-
     return(
         <Fragment>
             <div className="nav-icons">

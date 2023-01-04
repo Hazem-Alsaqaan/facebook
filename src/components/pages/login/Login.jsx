@@ -1,43 +1,21 @@
-import React, { Fragment, useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getAllUser } from "../../../redux/action/userAction";
-import { userOnLocalstorage } from "../../../redux/reducer/userSlice";
+import React, { Fragment, useState } from "react";
 import "./Login.css"
 
 const Login = ()=>{
-    const dispatch = useDispatch()
-    const users = useSelector((state)=> state.allUsers.users)
     const [email, setEmail]= useState("")
     const [password, setPassword] = useState("");
-    useEffect(()=>{
-        return async()=>{
-            await dispatch(getAllUser())
-        }
-    },[dispatch])
-
-    const userFilter = users.filter((user)=>{
-        return user.email === email && user.password === password
-    })
-    const [isIncludes, setIsIncludes] = useState(true)
     
-    const checkData = (e, pass)=>{
-        const temp = users.includes(...userFilter)
+    const handleLogin = (e)=>{
         e.preventDefault()
-        if(temp){
-            setIsIncludes(true)
-            dispatch(userOnLocalstorage(userFilter[0]._id))
-            window.location = pass
-        }else{
-            setIsIncludes(false)
-            e.preventDefault()
-        }
+        window.localStorage.setItem("user", JSON.stringify({email, password}))
+        window.location = "/home"
     }
 
     return(
         <Fragment>
                 <form 
                 className="login m-2"
-                onSubmit={(e)=>checkData(e, "/home")}
+                onSubmit={(e)=>handleLogin(e)}
                 >
                     <div className="mx-2">
                         <label htmlFor="exampleInputEmail1" className="form-label">email</label>
@@ -65,10 +43,6 @@ const Login = ()=>{
                     >login
                     </button>
                 </form>
-                    <div className="text-primary">{!isIncludes ? "check password or email" : ""}</div>
-                    {/* <button
-                    onClick={()=>console.log(userFilter[0]._id)}>
-                    console</button> */}
         </Fragment>
     )
 }

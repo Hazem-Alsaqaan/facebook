@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, memo } from "react";
 import ProfileImg from "../profile img/ProfileImg";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faThumbsUp} from "@fortawesome/free-regular-svg-icons"
@@ -13,8 +13,6 @@ import { useEffect } from "react";
 
 const Posts = ()=>{
     const {oneUser} = useSelector((state)=> state.allUsers)
-
-
     const [commentToggil, setCommentToggil] = useState(false) 
     const dispatch = useDispatch()
     const posts = useSelector((state)=> state.allPosts)
@@ -78,4 +76,4 @@ const Posts = ()=>{
         </Fragment>
     )
 }
-export default Posts
+export default memo(Posts)

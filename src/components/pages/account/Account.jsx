@@ -1,6 +1,4 @@
-import React, { Fragment, useEffect} from "react";
-import { useDispatch} from "react-redux";
-import { getOneUser } from "../../../redux/action/userAction";
+import React, { Fragment} from "react";
 import Header from "../../header/Header";
 import Posts from "../../posts/Posts";
 import ProfileImages from "../../profile-images/ProfileImages";
@@ -9,13 +7,6 @@ import "./Account.css"
 
 
 const Account = ()=>{
-    const id = JSON.parse(window.localStorage.getItem("user_ID"))
-    const dispatch = useDispatch();
-    useEffect(()=>{
-        return ()=>{
-            dispatch(getOneUser(id))
-        }
-    },[dispatch, id])
     return(
         <Fragment>
             <Header/>

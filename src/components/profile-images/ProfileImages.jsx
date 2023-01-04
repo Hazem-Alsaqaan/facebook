@@ -1,4 +1,5 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, memo } from "react";
+import { useCallback } from "react";
 import {  useDispatch, useSelector } from "react-redux";
 import { updateUser } from "../../redux/action/userAction";
 import BackgroundProfile from "../background-profile/BackgroundProfile";
@@ -20,10 +21,10 @@ const ProfileImages = ()=>{
         })
         reader.readAsDataURL(file)
     }
-    const handleSubmitPhoto = (e)=>{
+    const handleSubmitPhoto = useCallback((e)=>{
         e.preventDefault()
         dispatch(updateUser(userPhoto))
-    }
+    },[dispatch, userPhoto])
     const [depend, setDepend] = useState(false)
     return(
         <Fragment>
@@ -50,4 +51,4 @@ const ProfileImages = ()=>{
         </Fragment>
     )
 }
-export default ProfileImages
+export default memo(ProfileImages)

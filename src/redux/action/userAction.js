@@ -23,17 +23,6 @@ export const addNew = createAsyncThunk("users/addNew", async(item, thunkAPI)=>{
         console.log(`error to add new user ${rejectWithValue(err.message)}`)
     }
 })
-// get one user
-export const getOneUser = createAsyncThunk("users/getOneUser", async(id, thunkAPI)=>{
-    const {rejectWithValue} = thunkAPI
-    try{
-        const res = await axios.get(`http://localhost:3500/api/v1/users/${id}`)
-        const result = await res.data
-        return result   
-    }catch(err){
-        console.log(`error to get this user ${rejectWithValue(err.message)}`)
-    }
-})
 //update user
 // export const updateUser = createAsyncThunk("users/updateUser", async(id, item,thunkAPI)=>{
 //     const {rejectWithValue} = thunkAPI

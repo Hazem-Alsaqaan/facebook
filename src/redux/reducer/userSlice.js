@@ -1,15 +1,12 @@
 import {createSlice} from "@reduxjs/toolkit"
-import {addNew, getAllUser, getOneUser, updateUser} from "../action/userAction"
+import { userLogin } from "../action/loginAction"
+import {addNew, getAllUser, updateUser} from "../action/userAction"
 
 // get all user reducer slice
 const userSlice = createSlice({
     name: "users",
     initialState: {users:[], oneUser:{}, isLoading: false, err: ``, isLogin: false},
-    reducers:{
-        userOnLocalstorage:(state, action)=>{
-            window.localStorage.setItem("user_ID", JSON.stringify(action.payload))
-        }
-    },
+    reducers:{},
     extraReducers: (builder)=>{
         // get
         builder
@@ -49,19 +46,19 @@ const userSlice = createSlice({
         .addCase(updateUser.rejected, (state, action)=>{
             state.isLoading = false
         })
-        // get one user
+        // login user
         builder
-        .addCase(getOneUser.pending, (state, action)=>{
+        .addCase(userLogin.pending, (state, action)=>{
             state.isLoading = true;
         })
-        .addCase(getOneUser.fulfilled, (state, action)=>{
+        .addCase(userLogin.fulfilled, (state, action)=>{
             state.isLoading = false;
             state.oneUser = action.payload;
         })
-        .addCase(getOneUser.rejected, (state, action)=>{
+        .addCase(userLogin.rejected, (state, action)=>{
             state.isLoading = false;
+            state.err = action.error
         })
     }
 })
-export const {userOnLocalstorage} = userSlice.actions
 export default userSlice.reducer

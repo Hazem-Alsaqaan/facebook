@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react";
+import { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { updateUser } from "../../redux/action/userAction";
 import "./BackgroundProfile.css"
@@ -18,10 +19,10 @@ const BackgroundProfile = ()=>{
             })
         reader.readAsDataURL(file)
     }
-    const submitBackground = (e)=>{
+    const submitBackground = useCallback((e)=>{
         e.preventDefault()
         dispatch(updateUser(updateBackground))
-    }
+    },[dispatch, updateBackground])
 
 
     return(

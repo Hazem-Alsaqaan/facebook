@@ -10,7 +10,7 @@ const ProfileImg = ()=>{
             {isLoading ? <span>Loading...</span>: 
             <img 
             className="personal-img" 
-            src={oneUser.photo? oneUser.photo: `https://i.pinimg.com/474x/83/0a/82/830a8274e9d37f5530538d9357ebf3d8.jpg`} alt="profile img"
+            src={oneUser.photo ? oneUser.photo: `https://i.pinimg.com/474x/83/0a/82/830a8274e9d37f5530538d9357ebf3d8.jpg`} alt="profile img"
             />
             }
         </Fragment>

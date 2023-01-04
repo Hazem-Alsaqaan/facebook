@@ -7,9 +7,17 @@ import Shopping from './components/pages/shopping/Shopping';
 import Groups from './components/pages/groups/Groups';
 import Games from './components/pages/games/Games';
 import MainPage from './components/pages/mainPage/MainPage';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import {userLogin} from "./redux/action/loginAction"
 
 
 function App() {
+  const user = JSON.parse(window.localStorage.getItem("user"))
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(userLogin(user))
+  },[dispatch, user])
 
   return (
     <div className="App">

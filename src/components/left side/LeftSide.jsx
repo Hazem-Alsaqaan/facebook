@@ -8,10 +8,8 @@ import "./LeftSide.css"
 
 const LeftSide = ()=>{
     const {oneUser} = useSelector((state)=> state.allUsers)
-
-    
     const handleLogout = ()=>{
-        window.localStorage.clear()
+        window.localStorage.removeItem("user")
         window.location = "/"
     }
 
