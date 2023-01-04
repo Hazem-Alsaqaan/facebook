@@ -7,6 +7,7 @@ const ApiError = require("./src/utilities/ApiError")
 const {usersRouter} = require("./src/routes/usersRouter")
 const { postsRouter } = require("./src/routes/postsRouter");
 const {commentRouter} = require("./src/routes/commentRouter");
+const {loginRouter} = require("./src/routes/loginRouter")
 
 const app = express();
 
@@ -25,6 +26,7 @@ const PORT = process.env.PORT
 app.use("/api/v1/users", usersRouter);
 app.use("/api/v1/posts", postsRouter);
 app.use("/api/v1/comments", commentRouter);
+app.use("/api/v1/login", loginRouter);
 app.all("*", (req, res, next)=>{
     next(new ApiError(`this route ${req.originalUrl} is not correct`, 404))
 })
