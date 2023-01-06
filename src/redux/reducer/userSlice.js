@@ -19,7 +19,6 @@ const userSlice = createSlice({
         })
         .addCase(getAllUser.rejected, (state, action)=>{
             state.isLoading = false;
-            console.log("user rejected")
         })
         // post 
         builder
@@ -32,7 +31,6 @@ const userSlice = createSlice({
         })
         .addCase(addNew.rejected, (state, action)=>{
             state.isLoading = false;
-            console.log("rejected to add new user")
         })
         //update user
         builder
@@ -57,7 +55,6 @@ const userSlice = createSlice({
         })
         .addCase(userLogin.rejected, (state, action)=>{
             state.isLoading = false;
-            state.err = action.error
         })
     }
 })

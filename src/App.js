@@ -10,12 +10,14 @@ import MainPage from './components/pages/mainPage/MainPage';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import {userLogin} from "./redux/action/loginAction"
+import { getAllUser } from './redux/action/userAction';
 
 
 function App() {
   const user = JSON.parse(window.localStorage.getItem("user"))
   const dispatch = useDispatch()
   useEffect(()=>{
+    dispatch(getAllUser())
     dispatch(userLogin(user))
   },[dispatch, user])
 

@@ -6,6 +6,6 @@ export const userLogin = createAsyncThunk("users/userLogin", async(item, thunkAp
         const res = await axios.post(`http://localhost:3500/api/v1/login`, item)
         return res.data
     }catch(err){
-        return `Error: From Client To Login ${err}`
+        return `Error: From Client To Login ${err.message}`
     }
 })
