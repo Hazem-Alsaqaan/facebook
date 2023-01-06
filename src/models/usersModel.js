@@ -6,8 +6,8 @@ const usersSchema =  new mongoose.Schema({
         required: true,
         trim: true,
         unique: true,
-        max: 32,
-        min: 3
+        maxLength: 32,
+        minLength: 3
     },
     email: {
         type: String,
@@ -19,7 +19,7 @@ const usersSchema =  new mongoose.Schema({
         type: String,
         required: true,
         trim: true,
-        min: 8,
+        minLength: 6,
     },
     photo: {
         type: String,
@@ -33,7 +33,7 @@ const usersSchema =  new mongoose.Schema({
     posts: [],
     followers: [],
     following: []
-})
+}, {timestamps: true})
 
 const usersModels = mongoose.model("users", usersSchema);
 module.exports = {usersModels};

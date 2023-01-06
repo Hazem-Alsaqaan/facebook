@@ -3,9 +3,9 @@ const ApiError = require("../utilities/ApiError")
 
 // create comment
 const addComment = async (req, res, next)=>{
-    const {comment, posts} = req.body
+    const {comment, posts, users} = req.body
     try{
-        const newComment = await commentModel.create({comment, posts})
+        const newComment = await commentModel.create({comment, posts, users})
         res.status(201).json(newComment)
     }catch(err){
         next (new ApiError(`error to create new comment ${err.message}`, 400))
